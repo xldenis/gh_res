@@ -1,0 +1,7 @@
+%section
+  .languages
+    = partial :language, collection: @res.languages
+  .projects
+    = partial :project, collection: @res.popular_projects(5)
+  .info
+    = partial :info, locals: {user: @res.info}
