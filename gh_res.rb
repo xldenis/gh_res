@@ -22,13 +22,13 @@ module GithubResume
 
 
     get "/" do 
-      # if !authenticated?
-      #   authenticate!
-      # end
+      if !authenticated?
+        authenticate!
+      end
 
-      # @res = Resume.new(github_user)
-      # haml :resume
-      haml :test
+      @res = Resume.new(github_user)
+      haml :resume
+
     end 
 
     get "/callback" do
